@@ -9,7 +9,10 @@
     "javascript": "javascriptreact"
   },
   // "editor.renderWhitespace": "all",
-  "editor.rulers": [80, 120],
+  "editor.rulers": [
+    80,
+    120
+  ],
   "editor.tabSize": 2,
   "editor.parameterHints.enabled": true,
   "editor.fontLigatures": false
