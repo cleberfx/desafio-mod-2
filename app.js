@@ -1,6 +1,6 @@
 import  express from 'express';
 import gradesRouter from "./routes/grades.js"
-import { promise as fs } from "fs";
+import { promises as fs } from "fs";
 
 const {readFile, writeFile}=fs
 
@@ -15,14 +15,25 @@ app.listen(3000, async() => {
   nextId:1,
   grades:[]
 
-  
+
 }
 await readFile("grades.json")
 
 
-  console.log('API Started');
+  
 
   } catch (error) {
+    writeFile("grades.json",  JSON.stringify(initialJson)).then(() =>
+    {
+console.log('API Started');
+    }
+
+
+    ).catch(err =>{
+      console.log(err);
+    }
+
+    );
     
   }
 
