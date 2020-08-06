@@ -3,3 +3,15 @@
 get http://localhost:3000/grades 
 
 ###
+POST http://localhost:3000/grades
+Content-Type: application/json
+
+{"student":"Raul Seixas",
+"subject": "Geografia",
+"type" : "Prova Final",
+"value": 5
+
+}
+###
+
+
