@@ -31,4 +31,13 @@ router.post('/', async (req, res) => {
   res.send(grade);
 });
 
+router.get('/:id', async (req, res) => {
+  const data = JSON.parse(await readFile('grades.json'));
+  const grade = data.grades.find(
+    (grade) => grade.id === parseInt(req.params.id)
+  );
+  console.log(data);
+  res.send(grade);
+});
+
 export default router;
