@@ -40,4 +40,15 @@ router.get('/:id', async (req, res) => {
   res.send(grade);
 });
 
+router.delete('/:id', async (req, res) => {
+  const data = JSON.parse(await readFile('grades.json'));
+  data.grades = data.grades.filter(
+    (grade) => grade.id !== parseInt(req.params.id)
+  );
+  await writeFile('grades.json', JSON.stringify(data));
+
+  console.log(data);
+  res.end();
+});
+
 export default router;
