@@ -19,3 +19,27 @@ GET http://localhost:3000/grades/33
 ###
 
 DELETE http://localhost:3000/grades/50
+
+
+###
+
+PUT http://localhost:3000/grades
+Content-Type: application/json
+
+{
+"id":49,
+  "student":"Raul Chaves",
+"subject": "Fisica",
+"type" : "Prova Inicial",
+"value": 9,
+"timestamp": "2020-08-06T09:20:43.662Z"
+}
+
+###
+GET http://localhost:3000/grades/Rodrigo Branas/04 - MongoDB
+
+###
+
+GET http://localhost:3000/grades/Trabalho Prático/04 - MongoDB
+
+###
