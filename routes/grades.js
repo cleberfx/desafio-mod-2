@@ -93,63 +93,63 @@ router.put('/', async (req, res) => {
   // console.log(data);
 });
 
-// router.get('/:student/:subject', async (req, res) => {
-//   try {
-//     const data = JSON.parse(await readFile('grades.json'));
+router.get('/totalgrade/:student/:subject', async (req, res) => {
+  try {
+    const data = JSON.parse(await readFile('grades.json'));
 
-//     const grade = data.grades.filter(
-//       (grade) =>
-//         grade.student === req.params.student &&
-//         grade.subject === req.params.subject
-//     );
-//     const sumAllValuesType = grade.reduce((acc, curr) => {
-//       return acc + curr.value;
-//     }, 0);
-//     let result = sumAllValuesType.toString();
-//     console.log(result);
-//     if (grade !== undefined) {
-//       res.send(result);
-//     } else {
-//       res.send('Estudante não encontrado.');
-//     }
+    const grade = data.grades.filter(
+      (grade) =>
+        grade.student === req.params.student &&
+        grade.subject === req.params.subject
+    );
+    const sumAllValuesType = grade.reduce((acc, curr) => {
+      return acc + curr.value;
+    }, 0);
+    let result = sumAllValuesType.toString();
+    console.log(result);
+    if (grade !== undefined) {
+      res.send(result);
+    } else {
+      res.send('Estudante não encontrado.');
+    }
 
-//     // console.log(grade.id);
-//   } catch (error) {
-//     res.status(400).send({ error: error.message });
-//   }
+    // console.log(grade.id);
+  } catch (error) {
+    res.status(400).send({ error: error.message });
+  }
 
-//   // console.log(data);
-// });
+  // console.log(data);
+});
 
-// router.get('/:type/:subject', async (req, res) => {
-//   try {
-//     const data = JSON.parse(await readFile('grades.json'));
+router.get('/mediagrades/:type/:subject', async (req, res) => {
+  try {
+    const data = JSON.parse(await readFile('grades.json'));
 
-//     const grade = data.grades.filter(
-//       (grade) =>
-//         grade.type === req.params.type && grade.subject === req.params.subject
-//     );
-//     const sumAllValuesType = grade.reduce((acc, curr) => {
-//       return acc + curr.value;
-//     }, 0);
-//     let result = sumAllValuesType / grade.length;
-//     let resultString = result.toString();
-//     console.log(grade);
-//     if (grade.length !== 0) {
-//       res.send(resultString);
-//     } else {
-//       res.send('Subject e(ou) Type não encontrado.');
-//     }
+    const grade = data.grades.filter(
+      (grade) =>
+        grade.type === req.params.type && grade.subject === req.params.subject
+    );
+    const sumAllValuesType = grade.reduce((acc, curr) => {
+      return acc + curr.value;
+    }, 0);
+    let result = sumAllValuesType / grade.length;
+    let resultString = result.toString();
+    console.log(grade);
+    if (grade.length !== 0) {
+      res.send(resultString);
+    } else {
+      res.send('Subject e(ou) Type não encontrado.');
+    }
 
-//     // console.log(grade.id);
-//   } catch (error) {
-//     res.status(400).send({ error: error.message });
-//   }
+    // console.log(grade.id);
+  } catch (error) {
+    res.status(400).send({ error: error.message });
+  }
 
-//   // console.log(data);
-// });
+  // console.log(data);
+});
 
-router.get('/:type/:subject', async (req, res) => {
+router.get('/biggergrades/:type/:subject', async (req, res) => {
   try {
     const data = JSON.parse(await readFile('grades.json'));
 

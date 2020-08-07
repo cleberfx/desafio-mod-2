@@ -36,10 +36,13 @@ Content-Type: application/json
 }
 
 ###
-GET http://localhost:3000/grades/Rodrigo Branas/04 - MongoDB
+GET http://localhost:3000/grades/totalgrade/Rodrigo Branas/04 - MongoDB
 
 ###
 
-GET http://localhost:3000/grades/Trabalho Prático/04 - MongoDB
+GET http://localhost:3000/grades/mediagrades/Trabalho Prático/04 - MongoDB
+
+###
+GET http://localhost:3000/grades/biggergrades/Trabalho Prático/04 - MongoDB
 
 ###
