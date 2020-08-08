@@ -6,19 +6,20 @@ get http://localhost:3000/grades
 POST http://localhost:3000/grades
 Content-Type: application/json
 
-{"student":"Raul Seixas",
-"subject": "Geografia",
-"type" : "Prova Final",
-"value": 5
+{
+"student":"Roberto Achar",
+"subject": "03 - React",
+"type" : "Fórum",
+"value": 10
 
 }
 ###
 
-GET http://localhost:3000/grades/33
+GET http://localhost:3000/grades/43
 
 ###
 
-DELETE http://localhost:3000/grades/50
+DELETE http://localhost:3000/grades/32
 
 
 ###
@@ -27,22 +28,22 @@ PUT http://localhost:3000/grades
 Content-Type: application/json
 
 {
-"id":49,
-  "student":"Raul Chaves",
-"subject": "Fisica",
-"type" : "Prova Inicial",
-"value": 9,
+"id":33,
+"student":"Roberto Achar",
+"subject": "01 - JavaScript",
+"type" : "Desafio",
+"value": 15,
 "timestamp": "2020-08-06T09:20:43.662Z"
 }
 
 ###
-GET http://localhost:3000/grades/totalgrade/Rodrigo Branas/04 - MongoDB
+GET http://localhost:3000/grades/totalgrade/Roberto Achar/03 - React
 
 ###
 
 GET http://localhost:3000/grades/mediagrades/Trabalho Prático/04 - MongoDB
 
 ###
-GET http://localhost:3000/grades/biggergrades/Trabalho Prático/04 - MongoDB
+GET http://localhost:3000/grades/biggergrades/Trabalho Prático/03 - React
 
 ###

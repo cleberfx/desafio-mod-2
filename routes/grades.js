@@ -158,7 +158,7 @@ router.get('/biggergrades/:type/:subject', async (req, res) => {
         (grade) =>
           grade.type === req.params.type && grade.subject === req.params.subject
       )
-      .sort((a, b) => a.value.length - b.value.length)
+      .sort((a, b) => b.value - a.value)
       .slice(0, 3);
 
     console.log(grade);
